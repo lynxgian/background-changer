@@ -7,8 +7,8 @@
     "distDir": "../build"
   },
   "package": {
-    "productName": "tauri-app",
-    "version": "0.1.0"
+    "productName": "Background Changer",
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
@@ -60,7 +60,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "Tauri App",
+        "title": "Background Changer",
         "width": 800
       }
     ]

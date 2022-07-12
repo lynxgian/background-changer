@@ -6,7 +6,7 @@
 use wallpaper;
 use http::{Request, Response};
 use try_catch::catch;
-
+use tauri::api::notification::Notification;
 
 
 
@@ -15,10 +15,14 @@ fn main() {
     .invoke_handler(tauri::generate_handler![setWallpaper])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
+
 }
 
 
 #[tauri::command]
 fn setWallpaper(url: &str){
-    wallpaper::set_from_url(url).unwrap();
-  }
+    let b = wallpaper::set_from_url(url).expect("Error occured");
+
+  
+ 
+  } 
